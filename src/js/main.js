@@ -30,7 +30,7 @@ btnSearch.onclick = async () => {
 async function getData () {
 	const params = {Author: bookAuthor.value, BookName: bookName.value};
 	try {
-		const response = await fetch('http://pekarapi/book/book/list',{
+		const response = await fetch('http://pekarapi/book/book/119415',{
 			method: "POST",
 			headers: {
 				'Content-Type': 'application/json;charset=utf-8'
