@@ -24,13 +24,14 @@ const res = [
 btnSearch.onclick = async () => {
 	const data = await getData();
 	setData(divResult, data);
+	// console.log(data);
 }
 
 
 async function getData () {
 	const params = {Author: bookAuthor.value, BookName: bookName.value};
 	try {
-		const response = await fetch('http://pekarapi/book/book/119415',{
+		const response = await fetch('https://api.pekarlib.ru/book/book/B1p1s9Z4b1V5XyIi',{
 			method: "POST",
 			headers: {
 				'Content-Type': 'application/json;charset=utf-8'
@@ -55,11 +56,11 @@ function setData(elem, data) {
 	elem.innerHTML = data.reduce(
 		(ac, cur) => ac +
 			'<details><summary>' +
-			`<span style="font-weight: bold">${cur.bookAuthor}</span> &nbsp;` +
-			`<span style="color: blue">${cur.bookName}</span></summary>` +
-			`<span style="font-style: italic">${cur.bookInfo}</span>` +
+			`<span class="fw-bold">${cur.bookAuthor}</span> &nbsp;` +
+			`<span class="text-success">${cur.bookName}</span></summary>` +
+			`<span class="fst-italic">${cur.bookInfo}</span>` +
 			cur.bookWorks.reduce(
-				(a, c) => a + `<p class="mb-1">${c}`, ''
+				(a, c) => a + `<p class="mb-1 text-black-50">${c}`, ''
 			) +
 			'</details>',
 		'',
