@@ -10,24 +10,24 @@
 		<link rel="shortcut icon" href="./img/favicon/favicon.ico" />
 		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png" />
 		<meta name="apple-mobile-web-app-title" content="MyWebSite" />
-		<link rel="manifest" href="./img/favicon/site.webmanifest" />	</head>
+		<link rel="manifest" href="site.webmanifest" />
+	</head>
 	<body>
 
 		<div class="container">
 			<div class="row">
-					<!-- Заголовок и краткое описание -->
 					<h3 class="text-center display-9">Поиск книг</h3>
-					<p class="text-center fw-medium">Найдем книги и произведения в библиотеке Пекаров.</p>
+<!--					<p class="text-center fw-medium">Найдем книги и произведения в библиотеке Пекаров.</p>-->
 			</div>
 			<div class="row mb-1">
-				<div class="col-5">
+				<div class="col-5 px-1">
 					<input id="bookAuthor" type="text" placeholder="Автор" class="form-control">
 				</div>
-				<div class="col-5">
+				<div class="col-5 px-1">
 					<input id="bookName" type="text" placeholder="Название" class="form-control">
 				</div>
-				<div class="col-2">
-					<button class="btn btn-primary" id="btnSearch">Найти</button>
+				<div class="col-2 px-1">
+					<button class="btn btn-primary" id="btnSearch"><i class="bi bi-search"></i></button>
 				</div>
 			</div>
 
@@ -35,33 +35,6 @@
 				<div class="col-12" id="divResult"></div>
 			</div>
 		</div>
-
-		<!-- Модальное окно для всплывающих предупреждений -->
-		<!-- button id="copy_btn" class="btn btn-primary"><i class="bi bi-copy"></i></button -->
-		<!-- Button trigger modal -->
-		<!--button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-			Launch static backdrop modal
-		</button-->
-		<!-- Modal >
-		<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						...
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Understood</button>
-					</div>
-				</div>
-			</div>
-		</div -->
 
 		<script type="module" src="./js/main.js"></script>
 	</body>
